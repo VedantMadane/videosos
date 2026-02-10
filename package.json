@@ -11,7 +11,10 @@
     "lint:biome": "biome check --write .",
     "format": "biome format --write .",
     "type-check": "tsc --noEmit",
-    "check": "npm run lint:biome && npm run lint && npm run type-check",
+    "test": "vitest run",
+    "update-fal-models": "python3 scripts/parse_fal_models.py && tsx scripts/apply-fal-updates.ts",
+    "safe-apply-parameters": "tsx scripts/safe-apply-parameters.ts",
+    "check": "npm run lint:biome && npm run lint && npm run type-check && npm run test",
     "prepare": "husky"
   },
   "dependencies": {
@@ -50,7 +53,7 @@
     "idb": "^8.0.0",
     "lucide-react": "^0.468.0",
     "nanoid": "^5.0.9",
-    "next": "^14.2.23",
+    "next": "^14.2.35",
     "next-intl": "^4.3.9",
     "react": "^18",
     "react-dom": "^18",
@@ -68,15 +71,22 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@remotion/cli": "^4.0.240",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/throttle-debounce": "^5.0.2",
+    "@vitejs/plugin-react": "^5.1.4",
     "eslint": "8.57.1",
     "eslint-config-next": "15.5.4",
     "husky": "^9.1.7",
+    "jsdom": "^28.0.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tsx": "^4.21.0",
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^6.1.0",
+    "vitest": "^4.0.18"
   }
 }
