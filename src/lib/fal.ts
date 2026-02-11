@@ -158,6 +158,46 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     initialInput: {
       prompt: "",
       image_url: "",
+      availableDimensions: [
+        {
+          width: 1024,
+          height: 438,
+          label: "1024x438 (21:9)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 1024,
+          height: 768,
+          label: "1024x768 (4:3)",
+        },
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+        {
+          width: 768,
+          height: 1024,
+          label: "768x1024 (3:4)",
+        },
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+        {
+          width: 438,
+          height: 1024,
+          label: "438x1024 (9:21)",
+        },
+      ],
+      minGuidanceScale: 1,
+      maxGuidanceScale: 20,
+      defaultGuidanceScale: 3.5,
     },
     availableDimensions: [
       {
@@ -211,6 +251,38 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     category: "image",
     initialInput: {
       prompt: "",
+      availableDimensions: [
+        {
+          width: 1024,
+          height: 438,
+          label: "1024x438 (21:9)",
+        },
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+        {
+          width: 1024,
+          height: 768,
+          label: "1024x768 (4:3)",
+        },
+        {
+          width: 768,
+          height: 1024,
+          label: "768x1024 (3:4)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+      ],
     },
     availableDimensions: [
       {
@@ -309,6 +381,9 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     category: "image",
     initialInput: {
       prompt: "",
+      minGuidanceScale: 1,
+      maxGuidanceScale: 10,
+      defaultGuidanceScale: 2.5,
     },
     minGuidanceScale: 1,
     maxGuidanceScale: 10,
@@ -371,6 +446,12 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     initialInput: {
       prompt: "",
       image_url: "",
+      minSteps: 10,
+      maxSteps: 50,
+      defaultSteps: 30,
+      minGuidanceScale: 0,
+      maxGuidanceScale: 20,
+      defaultGuidanceScale: 2.5,
     },
     minSteps: 10,
     maxSteps: 50,
@@ -390,14 +471,14 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     cost: "$0.025/megapixel",
     popularity: 5,
     category: "image",
+    hasSeed: true,
+    hasSafetyChecker: true,
     minSteps: 1,
     maxSteps: 50,
     defaultSteps: 28,
     minGuidanceScale: 1,
     maxGuidanceScale: 20,
     defaultGuidanceScale: 3.5,
-    hasSeed: true,
-    hasSafetyChecker: true,
   },
   {
     provider: "fal",
@@ -481,15 +562,15 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     cost: "$0.03/megapixel",
     popularity: 4,
     category: "image",
+    hasSeed: true,
+    hasNegativePrompt: true,
+    hasSafetyChecker: true,
     minSteps: 1,
     maxSteps: 50,
     defaultSteps: 28,
     minGuidanceScale: 0,
     maxGuidanceScale: 20,
     defaultGuidanceScale: 3.5,
-    hasSeed: true,
-    hasNegativePrompt: true,
-    hasSafetyChecker: true,
   },
   {
     provider: "fal",
@@ -557,6 +638,33 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     initialInput: {
       prompt:
         "An ultra-detailed macro photograph of a butterfly wing showing intricate patterns and iridescent colors with perfect focus and lighting",
+      availableDimensions: [
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+        {
+          width: 768,
+          height: 1024,
+          label: "768x1024 (3:4)",
+        },
+        {
+          width: 1024,
+          height: 768,
+          label: "1024x768 (4:3)",
+        },
+      ],
     },
     availableDimensions: [
       {
@@ -599,6 +707,33 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     category: "image",
     initialInput: {
       prompt: "",
+      availableDimensions: [
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+        {
+          width: 768,
+          height: 1024,
+          label: "768x1024 (3:4)",
+        },
+        {
+          width: 1024,
+          height: 768,
+          label: "1024x768 (4:3)",
+        },
+      ],
     },
     availableDimensions: [
       {
@@ -654,15 +789,15 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     cost: "$0.1/megapixel",
     popularity: 3,
     category: "image",
+    hasSeed: true,
+    hasNegativePrompt: true,
+    hasSafetyChecker: true,
     minSteps: 1,
     maxSteps: 50,
     defaultSteps: 28,
     minGuidanceScale: 1,
     maxGuidanceScale: 20,
     defaultGuidanceScale: 7.5,
-    hasSeed: true,
-    hasNegativePrompt: true,
-    hasSafetyChecker: true,
   },
   {
     provider: "fal",
@@ -715,6 +850,9 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     cost: "$0.05/megapixel",
     popularity: 2,
     category: "image",
+    hasSeed: true,
+    hasNegativePrompt: true,
+    hasSafetyChecker: true,
     defaultWidth: 1024,
     defaultHeight: 1024,
     minSteps: 1,
@@ -723,9 +861,6 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     minGuidanceScale: 0,
     maxGuidanceScale: 20,
     defaultGuidanceScale: 5,
-    hasSeed: true,
-    hasNegativePrompt: true,
-    hasSafetyChecker: true,
   },
   {
     provider: "fal",
@@ -735,15 +870,15 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     cost: "~$0.03/megapixel",
     popularity: 2,
     category: "image",
+    hasSeed: true,
+    hasNegativePrompt: true,
+    hasSafetyChecker: true,
     minSteps: 2,
     maxSteps: 250,
     defaultSteps: 30,
     minGuidanceScale: 0,
     maxGuidanceScale: 20,
     defaultGuidanceScale: 2.5,
-    hasSeed: true,
-    hasNegativePrompt: true,
-    hasSafetyChecker: true,
   },
   {
     provider: "fal",
@@ -781,6 +916,25 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     category: "video",
     initialInput: {
       prompt: "",
+      availableDurations: [4, 6, 8],
+      defaultDuration: 8,
+      availableDimensions: [
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+      ],
     },
     availableDurations: [4, 6, 8],
     defaultDuration: 8,
@@ -815,6 +969,25 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     category: "video",
     initialInput: {
       prompt: "",
+      availableDurations: [4, 6, 8],
+      defaultDuration: 8,
+      availableDimensions: [
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+      ],
     },
     availableDurations: [4, 6, 8],
     defaultDuration: 8,
@@ -851,6 +1024,25 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     initialInput: {
       prompt: "",
       image_url: "",
+      availableDurations: [8],
+      defaultDuration: 8,
+      availableDimensions: [
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+      ],
     },
     availableDurations: [8],
     defaultDuration: 8,
@@ -885,6 +1077,25 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     initialInput: {
       prompt: "",
       image_url: "",
+      availableDurations: [8],
+      defaultDuration: 8,
+      availableDimensions: [
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+      ],
     },
     availableDurations: [8],
     defaultDuration: 8,
@@ -1097,6 +1308,40 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     initialInput: {
       prompt: "",
       image_url: "",
+      availableDurations: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      defaultDuration: 5,
+      availableDimensions: [
+        {
+          width: 1024,
+          height: 438,
+          label: "1024x438 (21:9)",
+        },
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 1024,
+          height: 768,
+          label: "1024x768 (4:3)",
+        },
+        {
+          width: 1024,
+          height: 1024,
+          label: "1024x1024 (1:1)",
+        },
+        {
+          width: 768,
+          height: 1024,
+          label: "768x1024 (3:4)",
+        },
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+      ],
     },
     availableDurations: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
     defaultDuration: 5,
@@ -1177,12 +1422,12 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     popularity: 5,
     category: "video",
     inputAsset: ["image"],
+    hasNegativePrompt: true,
     availableDurations: [5, 10],
     defaultDuration: 5,
     minGuidanceScale: 0,
     maxGuidanceScale: 1,
     defaultGuidanceScale: 0.5,
-    hasNegativePrompt: true,
   },
   {
     provider: "fal",
@@ -1197,6 +1442,11 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     initialInput: {
       prompt: "",
       image_url: "",
+      availableDurations: [5, 10],
+      defaultDuration: 5,
+      minGuidanceScale: 0,
+      maxGuidanceScale: 1,
+      defaultGuidanceScale: 0.5,
     },
     availableDurations: [5, 10],
     defaultDuration: 5,
@@ -1285,9 +1535,9 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     popularity: 4,
     category: "video",
     inputAsset: ["image"],
-    defaultDuration: 5,
     hasSeed: true,
     hasNegativePrompt: true,
+    defaultDuration: 5,
   },
   {
     provider: "fal",
@@ -1443,11 +1693,11 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     cost: "TBA",
     popularity: 4,
     category: "video",
+    hasSeed: true,
+    hasNegativePrompt: true,
     minSteps: 1,
     maxSteps: 50,
     defaultSteps: 30,
-    hasSeed: true,
-    hasNegativePrompt: true,
   },
   {
     provider: "fal",
@@ -1458,11 +1708,11 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     popularity: 4,
     category: "video",
     inputAsset: ["image"],
+    hasSeed: true,
+    hasNegativePrompt: true,
     minSteps: 1,
     maxSteps: 50,
     defaultSteps: 30,
-    hasSeed: true,
-    hasNegativePrompt: true,
   },
   {
     provider: "fal",
@@ -1565,6 +1815,21 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     initialInput: {
       flow_shift: 7,
       embedded_guidance_scale: 6,
+      availableDimensions: [
+        {
+          width: 1024,
+          height: 576,
+          label: "1024x576 (16:9)",
+        },
+        {
+          width: 576,
+          height: 1024,
+          label: "576x1024 (9:16)",
+        },
+      ],
+      minSteps: 2,
+      maxSteps: 30,
+      defaultSteps: 30,
     },
     availableDimensions: [
       {
@@ -1665,11 +1930,11 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     popularity: 3,
     category: "video",
     inputAsset: ["image"],
-    availableDurations: [5, 10],
-    defaultDuration: 5,
     hasSeed: true,
     hasNegativePrompt: true,
     hasSafetyChecker: true,
+    availableDurations: [5, 10],
+    defaultDuration: 5,
   },
   {
     provider: "fal",
@@ -1805,9 +2070,9 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     popularity: 2,
     category: "video",
     inputAsset: ["video"],
-    defaultDuration: 8,
     hasSeed: true,
     hasNegativePrompt: true,
+    defaultDuration: 8,
   },
   {
     provider: "fal",
@@ -1890,6 +2155,9 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     category: "music",
     initialInput: {
       seconds_total: 30,
+      minSteps: 1,
+      maxSteps: 1000,
+      defaultSteps: 100,
     },
     minSteps: 1,
     maxSteps: 1000,
@@ -1919,8 +2187,8 @@ export const AVAILABLE_ENDPOINTS: ApiInfo[] = [
     popularity: 3,
     category: "music",
     inputAsset: ["video"],
-    defaultDuration: 10,
     hasSeed: true,
+    defaultDuration: 10,
   },
   {
     provider: "fal",
